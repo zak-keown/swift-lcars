@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title description">
+<title id="title">Swift LCARS — TNG console geometry study</title>
+<desc id="description">Flat peach, mauve and lavender LCARS rails around a stellar cartography console. This is an original static design study with illustrative data, not a production screen or working app.</desc>
+<rect width="1440" height="960" fill="#000"/>
+<style>text{font-family:'LCARSGTJ3',sans-serif;font-stretch:condensed;font-weight:400} .label{font-size:23px;fill:#000} .small{font-size:19px;fill:#FCC19F} .data{font-size:24px;fill:#BAA4E5} .peach{fill:#FCC19F} .lilac{fill:#BAA4E5} .mauve{fill:#C082A9}</style>
+<!-- Continuous upper elbow: a wide vertical arm flows into a thin header. -->
+<path d="M32 188V118A78 78 0 0 1 110 40H286V76H238A50 50 0 0 0 188 126V188Z" fill="#FCC19F"/>
+<rect x="292" y="40" width="156" height="36" fill="#C082A9"/>
+<rect x="454" y="40" width="268" height="36" fill="#BAA4E5"/>
+<text x="1394" y="75" text-anchor="end" fill="#FCC19F" font-size="64">STELLAR CARTOGRAPHY</text>
+<text x="173" y="171" text-anchor="end" class="label">01-1701</text>
+<!-- Segment proportions are deliberately unequal. -->
+<rect x="32" y="194" width="156" height="88" fill="#BAA4E5"/>
+<rect x="32" y="288" width="156" height="146" fill="#FCC19F"/>
+<rect x="32" y="440" width="156" height="58" fill="#C082A9"/>
+<rect x="32" y="504" width="156" height="58" fill="#EB943A"/>
+<text x="173" y="266" text-anchor="end" class="label">OVERVIEW</text>
+<text x="173" y="416" text-anchor="end" class="label">SECTOR MAP</text>
+<text x="173" y="481" text-anchor="end" class="label">SENSORS</text>
+<text x="173" y="545" text-anchor="end" class="label">ARCHIVE</text>
+<path d="M32 568H188V588A44 44 0 0 0 232 632H238H286V668H110A78 78 0 0 1 32 590Z" fill="#FCC19F"/>
+<rect x="292" y="632" width="122" height="36" fill="#BAA4E5"/>
+<rect x="420" y="632" width="368" height="36" fill="#C082A9"/>
+<rect x="794" y="632" width="412" height="36" fill="#FCC19F"/>
+<path d="M1212 632H1388A18 18 0 0 1 1388 668H1212Z" fill="#EB943A"/>
+<text x="1191" y="659" text-anchor="end" class="label">LOCAL STELLAR SURVEY</text>
+<!-- Sparse plot uses the black field itself, rather than a card container. -->
+<text x="226" y="119" class="small">SECTOR 001 / SOL SYSTEM</text>
+<text x="810" y="119" text-anchor="end" class="small">0047.28</text>
+<g fill="none" stroke="#BAA4E5" stroke-width="1.5">
+<ellipse cx="510" cy="369" rx="85" ry="39"/>
+<ellipse cx="510" cy="369" rx="154" ry="76"/>
+<ellipse cx="510" cy="369" rx="223" ry="118"/>
+<ellipse cx="510" cy="369" rx="286" ry="164"/>
+</g>
+<g fill="none" stroke="#C082A9" stroke-width="1" stroke-dasharray="3 9">
+<path d="M226 369H813M510 174V566M307 224L713 512"/>
+</g>
+<circle cx="510" cy="369" r="13" fill="#FCC19F"/>
+<circle cx="582" cy="348" r="6" fill="#C082A9"/>
+<circle cx="375" cy="334" r="8" fill="#FCC19F"/>
+<circle cx="690" cy="439" r="9" fill="#BAA4E5"/>
+<circle cx="260" cy="448" r="7" fill="#C082A9"/>
+<g fill="none" stroke="#FCC19F" stroke-width="2"><circle cx="690" cy="439" r="19"/><path d="M709 439H755V479H816"/></g>
+<text x="814" y="504" text-anchor="end" class="small">TERRA</text>
+<text x="226" y="585" class="small">RANGE 04.72 AU</text>
+<text x="816" y="585" text-anchor="end" class="small">REFERENCE: HELIOCENTRIC</text>
+<!-- Right-side data hierarchy: bands, readouts, a compact telemetry trace. -->
+<path d="M870 101H1379A17 17 0 0 1 1379 135H870Z" fill="#BAA4E5"/>
+<text x="889" y="126" class="label">SENSOR TELEMETRY</text>
+<text x="877" y="177" class="small">ARRAY</text><text x="1120" y="177" class="small">RESOLUTION</text><text x="1393" y="177" text-anchor="end" class="small">STATUS</text>
+<g><text class="data" x="877" y="216">LATERAL 01</text><text class="data" x="1120" y="216">0.0042</text><text class="data" x="1393" y="216" text-anchor="end">ONLINE</text>
+<text class="data" x="877" y="252">LATERAL 02</text><text class="data" x="1120" y="252">0.0038</text><text class="data" x="1393" y="252" text-anchor="end">ONLINE</text>
+<text class="data" x="877" y="288">FORWARD</text><text class="data" x="1120" y="288">0.0016</text><text class="data" x="1393" y="288" text-anchor="end">ACTIVE</text></g>
+<rect x="870" y="313" width="344" height="10" fill="#C082A9"/><rect x="1220" y="313" width="176" height="10" fill="#FCC19F"/>
+<text x="877" y="360" class="small">SPECTRAL ANALYSIS</text><text x="1393" y="360" text-anchor="end" class="small">06.24 THZ</text>
+<g fill="none" stroke="#C082A9" stroke-width="1"><path d="M886 387V491H1396M886 440H1396"/></g>
+<path d="M886 472H916L931 459L947 473H970L986 460L1001 470L1025 425L1040 470H1060L1078 408L1093 469H1114L1130 393L1146 466L1165 453L1181 470H1204L1220 432L1238 471H1260L1276 459L1295 474H1321L1337 463L1355 472H1396" fill="none" stroke="#FCC19F" stroke-width="3"/>
+<text x="886" y="519" class="small">0.0</text><text x="1124" y="519" class="small">3.0</text><text x="1396" y="519" text-anchor="end" class="small">6.0</text>
+<rect x="870" y="550" width="64" height="48" rx="24" fill="#FCC19F"/><rect x="940" y="550" width="218" height="48" fill="#FCC19F"/><path d="M1164 550H1372A24 24 0 0 1 1372 598H1164Z" fill="#BAA4E5"/>
+<text x="1140" y="581" text-anchor="end" class="label">RUN SCAN</text><text x="1375" y="581" text-anchor="end" class="label">RECORD</text>
+<!-- Lower console section, a second elbow establishes the LCARS cadence. -->
+<path d="M32 822V764A66 66 0 0 1 98 698H286V724H228A40 40 0 0 0 188 764V822Z" fill="#BAA4E5"/>
+<rect x="292" y="698" width="574" height="26" fill="#FCC19F"/>
+<text x="1396" y="725" text-anchor="end" fill="#BAA4E5" font-size="48">OBSERVATION RECORD</text>
+<text x="173" y="800" text-anchor="end" class="label">02-0472</text>
+<rect x="32" y="828" width="156" height="70" fill="#C082A9"/>
+<text x="173" y="879" text-anchor="end" class="label">LOG 042</text>
+<text x="226" y="772" class="small">TARGET</text><text x="633" y="772" class="small">METHOD</text><text x="992" y="772" class="small">DURATION</text><text x="1395" y="772" text-anchor="end" class="small">RESULT</text>
+<rect x="216" y="788" width="1180" height="45" fill="#FCC19F"/>
+<g><text class="label" x="226" y="819">SOL / TERRA</text><text class="label" x="633" y="819">SPECTROGRAPHY</text><text class="label" x="992" y="819">00:04:28</text><text class="label" x="1383" y="819" text-anchor="end">COMPLETE</text></g>
+<g><text class="data" x="226" y="871">SOL / MARS</text><text class="data" x="633" y="871">SURFACE MAPPING</text><text class="data" x="992" y="871">00:12:06</text><text class="data" x="1395" y="871" text-anchor="end">COMPLETE</text></g>
+<rect x="216" y="892" width="1180" height="6" fill="#BAA4E5"/>
+<text x="32" y="937" fill="#C082A9" font-size="17">SWIFT LCARS / TNG GEOMETRY STUDY 02</text>
+<text x="1396" y="937" text-anchor="end" fill="#C082A9" font-size="17">ORIGINAL CONCEPT / ILLUSTRATIVE DATA</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">LCARS elbow and type study</title><desc id="desc">A measurable asymmetric elbow and natural LCARS GTJ3 letterforms. Proposed geometry, not canonical dimensions.</desc>
+<rect width="1200" height="800" fill="#000000"/>
+<text x="48" y="57" font-size="36" fill="#FCC19F">SWIFT LCARS / FORM STUDY 03</text>
+<text x="1152" y="57" text-anchor="end" font-size="25" fill="#C082A9">TNG DIRECTION</text>
+<!-- Width 144, rail 36, independent 72 and 48 radius circles. -->
+<path d="M64 400V204A72 72 0 0 1 136 132H576V168H256A48 48 0 0 0 208 216V400Z" fill="#FCC19F"/>
+<rect x="582" y="132" width="90" height="36" fill="#BAA4E5"/>
+<rect x="678" y="132" width="174" height="36" fill="#C082A9"/>
+<path d="M858 132H1116A18 18 0 0 1 1116 168H858Z" fill="#BAA4E5"/>
+<rect x="64" y="406" width="144" height="66" fill="#BAA4E5"/>
+<text x="194" y="451" text-anchor="end" font-size="30" fill="#000000">01-1701</text>
+<g fill="none" stroke="#8899FF" stroke-width="1.5">
+<path d="M64 116V95M208 116V95M64 103H208M1150 132H1174M1150 168H1174M1166 132V168"/>
+<circle cx="136" cy="204" r="72" stroke-dasharray="4 6"/><circle cx="256" cy="216" r="48" stroke-dasharray="4 6"/>
+<path d="M126 204H146M136 194V214M246 216H266M256 206V226M256 216L340 286H406M136 204L340 353H406"/>
+</g>
+<text x="136" y="94" text-anchor="end" font-size="22" fill="#BAA4E5">144</text>
+<text x="1144" y="193" font-size="22" fill="#BAA4E5">36</text>
+<text x="424" y="296" font-size="30" fill="#FCC19F">INNER RADIUS 48</text>
+<text x="424" y="363" font-size="30" fill="#FCC19F">OUTER RADIUS 72</text>
+<text x="424" y="416" font-size="24" fill="#C082A9">INDEPENDENT RADII / TANGENT JOINS / 6 PT GUTTERS</text>
+<text x="424" y="450" font-size="24" fill="#C082A9">GEOMETRY PROPOSAL / NOT A STUDIO DIMENSION STANDARD</text>
+<rect x="48" y="508" width="1104" height="8" fill="#C082A9"/>
+<text x="48" y="560" font-size="24" fill="#C082A9">LCARS GTJ3 / NATURAL GLYPH WIDTHS / NO SYNTHETIC COMPRESSION</text>
+<text x="48" y="638" font-size="76" fill="#FCC19F">LIBRARY COMPUTER ACCESS</text>
+<text x="48" y="704" font-size="55" fill="#BAA4E5">0123456789 / 1701-D / 47.028</text>
+<text x="48" y="766" font-size="24" fill="#C082A9">FONT: GTJLCARS.DE / HELVETICA ULTRA COMPRESSED REFERENCE / FAN-DESIGNED FACE</text>
+</svg>

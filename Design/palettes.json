@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "colorSpace": "sRGB",
+  "status": "Unvalidated palette seeds; not official studio specifications.",
+  "source": {
+    "url": "https://www.thelcars.com/colors.php",
+    "accessed": "2026-09-29",
+    "classification": "fan-published"
+  },
+  "themes": [
+    {
+      "id": "classic",
+      "name": "Classic",
+      "swatches": [
+        "#FCC19F",
+        "#EB943A",
+        "#BAA4E5",
+        "#C082A9",
+        "#8899FF"
+      ]
+    },
+    {
+      "id": "voyager",
+      "name": "Voyager",
+      "swatches": [
+        "#99CCFF",
+        "#FFBB33",
+        "#55A7FF",
+        "#E98181",
+        "#E6F2FF"
+      ]
+    },
+    {
+      "id": "nemesis",
+      "name": "Nemesis Blue",
+      "swatches": [
+        "#6699FF",
+        "#88BBFF",
+        "#EBF0FF",
+        "#99CC33",
+        "#FFCC99"
+      ]
+    },
+    {
+      "id": "lowerDecks",
+      "name": "Lower Decks",
+      "swatches": [
+        "#FFAA44",
+        "#FF7700",
+        "#FFEECC",
+        "#FFCC99",
+        "#FF4400"
+      ]
+    },
+    {
+      "id": "lowerDecksPADD",
+      "name": "Lower Decks PADD",
+      "swatches": [
+        "#5588EE",
+        "#66CCFF",
+        "#99CCFF",
+        "#88EEFF",
+        "#F3F3FC"
+      ]
+    },
+    {
+      "id": "picard",
+      "name": "Picard",
+      "swatches": [
+        "#37A6D1",
+        "#41C4F7",
+        "#1C3C55",
+        "#D2D5DF",
+        "#FF6753"
+      ]
+    }
+  ],
+  "projectDefaults": {
+    "background": "#000000",
+    "textPrimary": "#F5F5F7",
+    "alert": {
+      "critical": "#FF4545",
+      "warning": "#FFCC66",
+      "normal": "#A7D8B0"
+    },
+    "note": "Project-authored defaults; semantic foreground pairs must be validated."
+  }
+}
