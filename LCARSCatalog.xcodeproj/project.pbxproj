@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006150B9BEF3DB0A77D24CE6 /* LCARSLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87EEBD9831893D979052B99 /* LCARSLiveActivity.swift */; };
+		097FF7AA8E08A1EF1A2921A1 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131CB1610AE45367B763B383 /* CatalogApp.swift */; };
+		0F481F0DD4FE3849B7617292 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697278DEFB925574BA6893A7 /* LiveActivityController.swift */; };
+		1A354C1BDA2CAD523D55E6F4 /* ObservatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */; };
+		1C365E2C1642973AF2026778 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F5713307F08C9EF324C0A /* CatalogView.swift */; };
+		4033FD22648FCD312382DD49 /* SwiftLCARS in Frameworks */ = {isa = PBXBuildFile; productRef = CBF745813605B60AB8E55F49 /* SwiftLCARS */; };
+		44565F2475EC8BE8B85ECDE2 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131CB1610AE45367B763B383 /* CatalogApp.swift */; };
+		4B615E7D8E0335BA07991115 /* SwiftLCARS in Frameworks */ = {isa = PBXBuildFile; productRef = A767A4F4C96B812E117369B2 /* SwiftLCARS */; };
+		565A92A786232E5C93783940 /* LCARSActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */; };
+		6E19C6B66F21C4F62695AB25 /* Galleries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824914FDE994DEE478751668 /* Galleries.swift */; };
+		7F45EFAA8986B63E1B7F0289 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697278DEFB925574BA6893A7 /* LiveActivityController.swift */; };
+		837705F48BF43989E82346A6 /* Galleries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824914FDE994DEE478751668 /* Galleries.swift */; };
+		9F20815ADF1B8B79F72CAB00 /* LCARSActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */; };
+		AD78A8E9D78A0093AE214DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EBF2728BDA2B23DE83024 /* Assets.xcassets */; };
+		B2EB8D9626D92740C172E851 /* SwiftLCARS in Frameworks */ = {isa = PBXBuildFile; productRef = 29FFA5D7483DE0204FC59FDC /* SwiftLCARS */; };
+		BB7FB93B6659F1901B9BE581 /* LCARSActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1A3AAE032BDD32A252F8A30C /* LCARSActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C77A1EC50CA2679B35E936F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EBF2728BDA2B23DE83024 /* Assets.xcassets */; };
+		CCF7CC49D19312C4E7AFAB20 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F5713307F08C9EF324C0A /* CatalogView.swift */; };
+		D8FCEE46B85DE971D877E85A /* LCARSActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */; };
+		E040AB7032F60D94859E60C2 /* ObservatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */; };
+		F971BFD851485347C7B1FAD1 /* CatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5215E6791BCABDB27FE04 /* CatalogUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25AB461F314EA29CD101E6FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE9A76E84E864A0FD6F8B80E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD466BF2626B61D3C79A8F8E;
+			remoteInfo = "LCARSCatalog-iOS";
+		};
+		EC764854E9307160D681FE5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE9A76E84E864A0FD6F8B80E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E2925B7184CE3D0C0C8FAC2;
+			remoteInfo = LCARSActivity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B3848FE5E783999AE4EAF62 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB7FB93B6659F1901B9BE581 /* LCARSActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		003F5713307F08C9EF324C0A /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		0A3EBF2728BDA2B23DE83024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DA5215E6791BCABDB27FE04 /* CatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUITests.swift; sourceTree = "<group>"; };
+		0EE8CA9DCBBBCB3F06CCF1E2 /* LCARSCatalog-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "LCARSCatalog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		131CB1610AE45367B763B383 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
+		1A3AAE032BDD32A252F8A30C /* LCARSActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LCARSActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARSActivityAttributes.swift; sourceTree = "<group>"; };
+		5D9F86A749B7F4D31CD438FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		697278DEFB925574BA6893A7 /* LiveActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityController.swift; sourceTree = "<group>"; };
+		824914FDE994DEE478751668 /* Galleries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galleries.swift; sourceTree = "<group>"; };
+		9346472E1FF842F69D6353E5 /* swift-lcars */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swift-lcars"; path = .; sourceTree = SOURCE_ROOT; };
+		A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservatoryView.swift; sourceTree = "<group>"; };
+		A87EEBD9831893D979052B99 /* LCARSLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARSLiveActivity.swift; sourceTree = "<group>"; };
+		C018D4A5C0C26BEECF4DB199 /* CatalogUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49A0DD266CC278E314EF622 /* LCARSCatalog-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LCARSCatalog-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37BD67A0FDC8A37FDA69AFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4033FD22648FCD312382DD49 /* SwiftLCARS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB81A150B3BCF26EDD313825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EB8D9626D92740C172E851 /* SwiftLCARS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E46A30E00526CF80970889E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B615E7D8E0335BA07991115 /* SwiftLCARS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68F73705873F052424D0059A = {
+			isa = PBXGroup;
+			children = (
+				9F20A40D0AC0C60874E32AA1 /* Examples */,
+				FDA52A245C29A27DC4B5FCE6 /* LCARSCatalog */,
+				FFD0FE46BE3975A297DC970D /* LiveActivity */,
+				B0C0ABF9E8D22C29A94470DB /* Packages */,
+				C9D171E4957AF3A4EA1F44AE /* UITests */,
+				741F245FFCE16C8E3FA5E753 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		741F245FFCE16C8E3FA5E753 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C018D4A5C0C26BEECF4DB199 /* CatalogUITests.xctest */,
+				1A3AAE032BDD32A252F8A30C /* LCARSActivity.appex */,
+				0EE8CA9DCBBBCB3F06CCF1E2 /* LCARSCatalog-iOS.app */,
+				D49A0DD266CC278E314EF622 /* LCARSCatalog-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F20A40D0AC0C60874E32AA1 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				0A3EBF2728BDA2B23DE83024 /* Assets.xcassets */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		B0C0ABF9E8D22C29A94470DB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				9346472E1FF842F69D6353E5 /* swift-lcars */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C9D171E4957AF3A4EA1F44AE /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5215E6791BCABDB27FE04 /* CatalogUITests.swift */,
+			);
+			name = UITests;
+			path = Examples/UITests;
+			sourceTree = "<group>";
+		};
+		FDA52A245C29A27DC4B5FCE6 /* LCARSCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				131CB1610AE45367B763B383 /* CatalogApp.swift */,
+				003F5713307F08C9EF324C0A /* CatalogView.swift */,
+				824914FDE994DEE478751668 /* Galleries.swift */,
+				41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */,
+				697278DEFB925574BA6893A7 /* LiveActivityController.swift */,
+				A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */,
+			);
+			name = LCARSCatalog;
+			path = Sources/LCARSCatalog;
+			sourceTree = "<group>";
+		};
+		FFD0FE46BE3975A297DC970D /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				5D9F86A749B7F4D31CD438FB /* Info.plist */,
+				A87EEBD9831893D979052B99 /* LCARSLiveActivity.swift */,
+			);
+			name = LiveActivity;
+			path = Examples/LiveActivity;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32BAB7FA64AF9F5F6FA73EDC /* CatalogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5976960587D38516D55898 /* Build configuration list for PBXNativeTarget "CatalogUITests" */;
+			buildPhases = (
+				4FD6277A0867EF9711E735F0 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A6644087B98581D7D116C9E /* PBXTargetDependency */,
+			);
+			name = CatalogUITests;
+			packageProductDependencies = (
+			);
+			productName = CatalogUITests;
+			productReference = C018D4A5C0C26BEECF4DB199 /* CatalogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		340427B59D470D0B9F82C702 /* LCARSCatalog-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4C808D557F6D049A424BECE /* Build configuration list for PBXNativeTarget "LCARSCatalog-macOS" */;
+			buildPhases = (
+				F23BBA801DA57AEE5E8C0A50 /* Sources */,
+				8377F6C978B888EC8970CD18 /* Resources */,
+				DB81A150B3BCF26EDD313825 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LCARSCatalog-macOS";
+			packageProductDependencies = (
+				29FFA5D7483DE0204FC59FDC /* SwiftLCARS */,
+			);
+			productName = "LCARSCatalog-macOS";
+			productReference = D49A0DD266CC278E314EF622 /* LCARSCatalog-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E2925B7184CE3D0C0C8FAC2 /* LCARSActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90DBCBE19EAE70580AA49235 /* Build configuration list for PBXNativeTarget "LCARSActivity" */;
+			buildPhases = (
+				19CC3EEF4214FF5C47EB7494 /* Sources */,
+				37BD67A0FDC8A37FDA69AFA3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LCARSActivity;
+			packageProductDependencies = (
+				CBF745813605B60AB8E55F49 /* SwiftLCARS */,
+			);
+			productName = LCARSActivity;
+			productReference = 1A3AAE032BDD32A252F8A30C /* LCARSActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DD466BF2626B61D3C79A8F8E /* LCARSCatalog-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB95472C85E4437583BFFF36 /* Build configuration list for PBXNativeTarget "LCARSCatalog-iOS" */;
+			buildPhases = (
+				A234C5B594A5F655844DA8D0 /* Sources */,
+				A7F101341DB1DDBC763BA346 /* Resources */,
+				E46A30E00526CF80970889E1 /* Frameworks */,
+				4B3848FE5E783999AE4EAF62 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC0FC819A9DEAB9A80F86000 /* PBXTargetDependency */,
+			);
+			name = "LCARSCatalog-iOS";
+			packageProductDependencies = (
+				A767A4F4C96B812E117369B2 /* SwiftLCARS */,
+			);
+			productName = "LCARSCatalog-iOS";
+			productReference = 0EE8CA9DCBBBCB3F06CCF1E2 /* LCARSCatalog-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE9A76E84E864A0FD6F8B80E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					32BAB7FA64AF9F5F6FA73EDC = {
+						TestTargetID = DD466BF2626B61D3C79A8F8E;
+					};
+				};
+			};
+			buildConfigurationList = 1F8B3EF28DA5AB1349135A4F /* Build configuration list for PBXProject "LCARSCatalog" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 68F73705873F052424D0059A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D16248FCD839DBEA8DEC7CC8 /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 741F245FFCE16C8E3FA5E753 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32BAB7FA64AF9F5F6FA73EDC /* CatalogUITests */,
+				DD466BF2626B61D3C79A8F8E /* LCARSCatalog-iOS */,
+				5E2925B7184CE3D0C0C8FAC2 /* LCARSActivity */,
+				340427B59D470D0B9F82C702 /* LCARSCatalog-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8377F6C978B888EC8970CD18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C77A1EC50CA2679B35E936F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F101341DB1DDBC763BA346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD78A8E9D78A0093AE214DD1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19CC3EEF4214FF5C47EB7494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FCEE46B85DE971D877E85A /* LCARSActivityAttributes.swift in Sources */,
+				006150B9BEF3DB0A77D24CE6 /* LCARSLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD6277A0867EF9711E735F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F971BFD851485347C7B1FAD1 /* CatalogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A234C5B594A5F655844DA8D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097FF7AA8E08A1EF1A2921A1 /* CatalogApp.swift in Sources */,
+				CCF7CC49D19312C4E7AFAB20 /* CatalogView.swift in Sources */,
+				6E19C6B66F21C4F62695AB25 /* Galleries.swift in Sources */,
+				565A92A786232E5C93783940 /* LCARSActivityAttributes.swift in Sources */,
+				7F45EFAA8986B63E1B7F0289 /* LiveActivityController.swift in Sources */,
+				E040AB7032F60D94859E60C2 /* ObservatoryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23BBA801DA57AEE5E8C0A50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44565F2475EC8BE8B85ECDE2 /* CatalogApp.swift in Sources */,
+				1C365E2C1642973AF2026778 /* CatalogView.swift in Sources */,
+				837705F48BF43989E82346A6 /* Galleries.swift in Sources */,
+				9F20815ADF1B8B79F72CAB00 /* LCARSActivityAttributes.swift in Sources */,
+				0F481F0DD4FE3849B7617292 /* LiveActivityController.swift in Sources */,
+				1A354C1BDA2CAD523D55E6F4 /* ObservatoryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A6644087B98581D7D116C9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD466BF2626B61D3C79A8F8E /* LCARSCatalog-iOS */;
+			targetProxy = 25AB461F314EA29CD101E6FE /* PBXContainerItemProxy */;
+		};
+		AC0FC819A9DEAB9A80F86000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E2925B7184CE3D0C0C8FAC2 /* LCARSActivity */;
+			targetProxy = EC764854E9307160D681FE5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		057341E97393E46A26871118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog.mac;
+				PRODUCT_NAME = LCARSCatalog;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		409D25F67E47A88AD6D788DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog.activity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D8DFBF0CB8FF3236996EF33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog.mac;
+				PRODUCT_NAME = LCARSCatalog;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		71F91D1A151BF61D9E181C36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8232BEBF0C99D1D7E0570276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LCARSCatalog-iOS";
+			};
+			name = Debug;
+		};
+		A3A48505D79943123106695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog;
+				PRODUCT_NAME = LCARSCatalog;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDBA82647FDA05AC85195DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D6252D732532434812DA4A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog;
+				PRODUCT_NAME = LCARSCatalog;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D999C5FA9C0D052E114B3FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog.activity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD0DEEA9DA9B9FB84D2ADCA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LCARSCatalog-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F8B3EF28DA5AB1349135A4F /* Build configuration list for PBXProject "LCARSCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F91D1A151BF61D9E181C36 /* Debug */,
+				BDBA82647FDA05AC85195DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5D5976960587D38516D55898 /* Build configuration list for PBXNativeTarget "CatalogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8232BEBF0C99D1D7E0570276 /* Debug */,
+				FD0DEEA9DA9B9FB84D2ADCA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		90DBCBE19EAE70580AA49235 /* Build configuration list for PBXNativeTarget "LCARSActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D999C5FA9C0D052E114B3FA2 /* Debug */,
+				409D25F67E47A88AD6D788DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B4C808D557F6D049A424BECE /* Build configuration list for PBXNativeTarget "LCARSCatalog-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D8DFBF0CB8FF3236996EF33 /* Debug */,
+				057341E97393E46A26871118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DB95472C85E4437583BFFF36 /* Build configuration list for PBXNativeTarget "LCARSCatalog-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A48505D79943123106695C /* Debug */,
+				D6252D732532434812DA4A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D16248FCD839DBEA8DEC7CC8 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29FFA5D7483DE0204FC59FDC /* SwiftLCARS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftLCARS;
+		};
+		A767A4F4C96B812E117369B2 /* SwiftLCARS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftLCARS;
+		};
+		CBF745813605B60AB8E55F49 /* SwiftLCARS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftLCARS;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AE9A76E84E864A0FD6F8B80E /* Project object */;
+}

@@ -4,7 +4,7 @@
 
 The `*-study.svg` files contain editable text. They require the separately obtained LCARSGTJ3 font to display correctly. The `*-outlined.svg` files contain rendered glyph outlines and display without installing fonts. PNGs are previews of those outlined files.
 
-Font reference: [GTJLCARS font page](https://www.gtjlcars.de/LCARSindex/LCARSFONTS.htm). Download the author's archive and retain its font filenames unchanged. The font is not bundled, installed globally, or modified here. `outline-study.swift` registers it only for its own process and renders the text to vector paths using CoreText. This utility supports these controlled study inputs; it is not a general SVG text engine.
+Font reference: [GTJLCARS font page](https://www.gtjlcars.de/LCARSindex/LCARSFONTS.htm). The library now includes the unchanged TTF in `Sources/SwiftLCARS/Resources` under the [author's terms](../THIRD-PARTY-NOTICES.md). It is not installed globally or modified. `outline-study.swift` registers it only for its own process and renders the text to vector paths using CoreText. This utility supports these controlled study inputs; it is not a general SVG text engine.
 
 Example after separately downloading the font:
 

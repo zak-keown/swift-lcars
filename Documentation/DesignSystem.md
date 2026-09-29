@@ -1,6 +1,6 @@
 # Swift LCARS design proposal
 
-All names and measurements here are proposals, not implemented APIs or canonical LCARS specifications.
+This document preserves the original design proposal. The first SwiftUI implementation now ships; see [Getting Started](GettingStarted.md) for its actual API and supported features. Measurements are project decisions, not canonical LCARS specifications.
 
 User-selected visual anchor: **TNG, warm, flat, screen-faithful intent**. The elbow and font are explicit first priorities. The rejected image-generation board is not an implementation reference. Use the outlined vector studies to review the next direction.
 
@@ -90,7 +90,7 @@ Choose layout from measured available space and content needs, not device names 
 
 ## Proposed developer experience
 
-Illustrative API only:
+Original API sketch (see Getting Started for the implemented API; density and inspector parameters remain future work):
 
 ```swift
 LCARSConsole(title: "Observatory") {

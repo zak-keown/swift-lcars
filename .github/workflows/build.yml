@@ -1,0 +1,16 @@
+name: Build and test
+on:
+  push:
+  pull_request:
+jobs:
+  swift-package:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test foundations and build Mac sample
+        run: swift test
+      - name: Build iOS sample and Live Activity
+        run: >-
+          xcodebuild -project LCARSCatalog.xcodeproj
+          -scheme LCARSCatalog-iOS -destination 'generic/platform=iOS Simulator'
+          -derivedDataPath .build-ci CODE_SIGNING_ALLOWED=NO build

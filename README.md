@@ -2,16 +2,39 @@
 
 A design system for building rich, native LCARS-inspired apps on Apple platforms.
 
-**Status: research and design foundation.** No Swift package or working app ships yet. The proposed API and dimensions are design decisions to evaluate in a native component catalog.
+**Status: initial SwiftUI implementation with a runnable sample app.** Supports macOS 14 and iOS/iPadOS 17 or later. TNG is the default visual direction.
 
 The aim is a recognizable LCARS visual language—sweeping elbows, segmented rails, capsule controls, expressive color and technical data displays—with native navigation, accessible controls and layouts that adapt to their content.
 
 ## Start here
 
+- [Package usage and sample app guide](Documentation/GettingStarted.md)
+- Open **LCARSCatalog.xcodeproj** and run the **LCARSCatalog-iOS** or **LCARSCatalog-macOS** scheme.
+- For a quick Mac launch: `swift run LCARSCatalog`.
 - [Research and source provenance](Documentation/Research.md)
 - [Design system proposal](Documentation/DesignSystem.md)
 - [Machine-readable palette seeds](Design/palettes.json)
-- [Concept generation brief](Design/ConceptPrompt.txt)
+
+```swift
+import SwiftLCARS
+
+Button("Engage", action: engage)
+    .buttonStyle(.lcars(.primary))
+    .lcarsAnimated(.pulse)  // optional
+
+LCARSActivityBand(.leftToRight, animated: true)
+    .frame(height: 18)
+```
+
+## Included
+
+- True circular elbows with independent radii, mirrored orientations and clamped geometry.
+- Automatically registered LCARS GTJ3 display typography at its natural glyph widths.
+- Six era palettes, plus a high-contrast preset and a readable typography mode.
+- Native button/toggle styles, selection controls, sections, adaptive console composition, readouts and meters.
+- Opt-in cycling digits, scrolling indicators in four directions, and pulse/scan modifiers for any shape or widget. Reduce Motion and inactive scenes pause ambient animation.
+- An Observatory example with simulated scans, filtering, selection and export; a component catalog; and a motion playground.
+- A real ActivityKit/WidgetKit Live Activity for iPhone. Tap the Dynamic Island to open the app's franchise picker; changing themes updates the activity.
 
 ## Selected direction: TNG
 
@@ -23,14 +46,16 @@ Warm, flat TNG-inspired LCARS is the visual anchor. Elbow geometry and typograph
 - [Console composition study](Design/tng-console.png)
 - [Scalable console study](Design/tng-console-outlined.svg)
 
-These are original static studies, not screenshots of a working app or exact reproductions of a production console. Dimensions remain proposals. The font is a fan-designed reference face; shipping typography is not yet finalized.
+These are the approved static design references, not screenshots of the sample app or exact reproductions of a production console. The library carries their geometry and fan-designed LCARS GTJ3 type into native SwiftUI.
 
-## Planned first release
+## Platform scope
 
-Start with macOS, iOS and iPadOS: a SwiftUI package, six visual themes, native control styles, adaptive console layouts and an Observatory example app. Expand to watchOS, tvOS and visionOS after their interaction models have dedicated examples.
+The first implementation targets macOS, iOS and iPadOS. watchOS, tvOS and visionOS need dedicated interaction examples before being advertised as supported. The sample's Xcode project includes a Live Activity extension; the Mac executable does not require ActivityKit.
 
 Era styling, interaction state and information density are independent choices. An alert must not change a control's meaning, and changing a theme must not change an app's behavior.
 
 ## Attribution
 
 LCARS was created by Michael Okuda for Star Trek. This is an independent, unofficial project. References are linked, not redistributed. The palette file identifies fan-source values and project-defined role assignments separately; none is presented as an official studio specification.
+
+The unmodified LCARS GTJ3 font is included under its author's terms. See [third-party notices](THIRD-PARTY-NOTICES.md).
