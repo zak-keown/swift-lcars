@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftLCARS
 
 enum CatalogPage: String, CaseIterable, Identifiable {
-    case observatory = "Observatory", components = "Components", motion = "Motion"
+    case archive = "Archive", observatory = "Observatory", components = "Components", motion = "Motion"
     var id: Self { self }
 }
 
@@ -10,7 +10,7 @@ struct CatalogView: View {
     @AppStorage("lcars.theme") private var themeID = "classic"
     @AppStorage("lcars.motion") private var motion = true
     @AppStorage("lcars.readable") private var readable = false
-    @State private var page: CatalogPage = .observatory
+    @State private var page: CatalogPage = .archive
     @State private var alert: LCARSAlert = .normal
     @State private var showThemes = false
     @State private var scanning = false
@@ -23,10 +23,11 @@ struct CatalogView: View {
         VStack(spacing: 0) {
             toolbar
             LCARSSequence(scanning ? .scanning : .idle, animated: motion) {
-                LCARSConsole(title: page == .observatory ? "Stellar cartography" : "LCARS / \(page.rawValue)") {
+                LCARSConsole(title: page == .archive ? "Dialogue archive" : (page == .observatory ? "Stellar cartography" : "LCARS / \(page.rawValue)")) {
                     ScrollView {
                         Group {
                             switch page {
+                            case .archive: DialogueArchiveView()
                             case .observatory: ObservatoryView(animated: motion, scanning: $scanning)
                             case .components: ComponentGallery(alert: $alert, readable: $readable)
                             case .motion: MotionGallery(animated: $motion)

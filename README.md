@@ -71,3 +71,10 @@ and [API examples](Documentation/GettingStarted.md#coordinated-console-motion).
 Four [application mockups](Design/AppConcepts/README.md) explore dialogue search,
 a reference library, an astronomy atlas, and a Mac system monitor. They are visual
 targets for future native app recipes, with exact generation prompts included.
+
+## Dialogue Archive sample
+
+The selected concept now has a [native SwiftUI recipe](Documentation/DialogueArchive.md):
+search and episode filters, illustrated results, transcript scrubbing and playback,
+saved lines, text export, and SRT import. It ships original demo dialogue and three
+generated stills; playback advances the transcript, with no bundled video or audio.

@@ -10,24 +10,34 @@
 		006150B9BEF3DB0A77D24CE6 /* LCARSLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87EEBD9831893D979052B99 /* LCARSLiveActivity.swift */; };
 		097FF7AA8E08A1EF1A2921A1 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131CB1610AE45367B763B383 /* CatalogApp.swift */; };
 		0F481F0DD4FE3849B7617292 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697278DEFB925574BA6893A7 /* LiveActivityController.swift */; };
+		13F8C7863720BE2A3C6D9FFD /* archive-surface.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B01C43B88196A6FAB31E8A6 /* archive-surface.png */; };
+		1444670A1197110DA22F18E9 /* archive-surface.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B01C43B88196A6FAB31E8A6 /* archive-surface.png */; };
 		1A354C1BDA2CAD523D55E6F4 /* ObservatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */; };
 		1C365E2C1642973AF2026778 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F5713307F08C9EF324C0A /* CatalogView.swift */; };
+		2A28FD23729B55900A4A901C /* archive-nebula.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F7CCC139A482079A2DB56A /* archive-nebula.png */; };
 		4033FD22648FCD312382DD49 /* SwiftLCARS in Frameworks */ = {isa = PBXBuildFile; productRef = CBF745813605B60AB8E55F49 /* SwiftLCARS */; };
 		44565F2475EC8BE8B85ECDE2 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131CB1610AE45367B763B383 /* CatalogApp.swift */; };
+		47357B9A0000A4713A315F59 /* archive-bridge.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC061786792DD27388A7491 /* archive-bridge.png */; };
 		4B615E7D8E0335BA07991115 /* SwiftLCARS in Frameworks */ = {isa = PBXBuildFile; productRef = A767A4F4C96B812E117369B2 /* SwiftLCARS */; };
 		565A92A786232E5C93783940 /* LCARSActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */; };
+		60454DBBB77DFC5050EF10F4 /* archive-nebula.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F7CCC139A482079A2DB56A /* archive-nebula.png */; };
+		6C288585486D9C1095DCC132 /* ArchiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA819AC9BAB900EDC2C416FB /* ArchiveModel.swift */; };
 		6E19C6B66F21C4F62695AB25 /* Galleries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824914FDE994DEE478751668 /* Galleries.swift */; };
 		7F45EFAA8986B63E1B7F0289 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697278DEFB925574BA6893A7 /* LiveActivityController.swift */; };
 		837705F48BF43989E82346A6 /* Galleries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824914FDE994DEE478751668 /* Galleries.swift */; };
 		9F20815ADF1B8B79F72CAB00 /* LCARSActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */; };
 		AD78A8E9D78A0093AE214DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EBF2728BDA2B23DE83024 /* Assets.xcassets */; };
+		AE3EB21CD1A4F5425455ABE4 /* ArchiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA819AC9BAB900EDC2C416FB /* ArchiveModel.swift */; };
 		B2EB8D9626D92740C172E851 /* SwiftLCARS in Frameworks */ = {isa = PBXBuildFile; productRef = 29FFA5D7483DE0204FC59FDC /* SwiftLCARS */; };
 		BB7FB93B6659F1901B9BE581 /* LCARSActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1A3AAE032BDD32A252F8A30C /* LCARSActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C14D0ACC1856AE8BDF3E2323 /* archive-bridge.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC061786792DD27388A7491 /* archive-bridge.png */; };
 		C77A1EC50CA2679B35E936F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EBF2728BDA2B23DE83024 /* Assets.xcassets */; };
 		CCF7CC49D19312C4E7AFAB20 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F5713307F08C9EF324C0A /* CatalogView.swift */; };
 		D8FCEE46B85DE971D877E85A /* LCARSActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */; };
+		D97E2B5046B595AF3B797EFD /* DialogueArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBB27BD1C556BE29B38672 /* DialogueArchiveView.swift */; };
 		E040AB7032F60D94859E60C2 /* ObservatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */; };
 		F971BFD851485347C7B1FAD1 /* CatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5215E6791BCABDB27FE04 /* CatalogUITests.swift */; };
+		F99B04AE03F11847FB5512C5 /* DialogueArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FBB27BD1C556BE29B38672 /* DialogueArchiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,14 +79,19 @@
 		131CB1610AE45367B763B383 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		1A3AAE032BDD32A252F8A30C /* LCARSActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LCARSActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARSActivityAttributes.swift; sourceTree = "<group>"; };
+		44FBB27BD1C556BE29B38672 /* DialogueArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueArchiveView.swift; sourceTree = "<group>"; };
 		5D9F86A749B7F4D31CD438FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		697278DEFB925574BA6893A7 /* LiveActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityController.swift; sourceTree = "<group>"; };
+		7B01C43B88196A6FAB31E8A6 /* archive-surface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "archive-surface.png"; sourceTree = "<group>"; };
 		824914FDE994DEE478751668 /* Galleries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galleries.swift; sourceTree = "<group>"; };
 		9346472E1FF842F69D6353E5 /* swift-lcars */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swift-lcars"; path = .; sourceTree = SOURCE_ROOT; };
 		A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservatoryView.swift; sourceTree = "<group>"; };
 		A87EEBD9831893D979052B99 /* LCARSLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARSLiveActivity.swift; sourceTree = "<group>"; };
+		AA819AC9BAB900EDC2C416FB /* ArchiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveModel.swift; sourceTree = "<group>"; };
 		C018D4A5C0C26BEECF4DB199 /* CatalogUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49A0DD266CC278E314EF622 /* LCARSCatalog-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LCARSCatalog-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F7CCC139A482079A2DB56A /* archive-nebula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "archive-nebula.png"; sourceTree = "<group>"; };
+		ECC061786792DD27388A7491 /* archive-bridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "archive-bridge.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,16 @@
 			);
 			sourceTree = "<group>";
 		};
+		6A3C11DC2CD6E08DE2668861 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECC061786792DD27388A7491 /* archive-bridge.png */,
+				D9F7CCC139A482079A2DB56A /* archive-nebula.png */,
+				7B01C43B88196A6FAB31E8A6 /* archive-surface.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		741F245FFCE16C8E3FA5E753 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,12 +183,15 @@
 		FDA52A245C29A27DC4B5FCE6 /* LCARSCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				AA819AC9BAB900EDC2C416FB /* ArchiveModel.swift */,
 				131CB1610AE45367B763B383 /* CatalogApp.swift */,
 				003F5713307F08C9EF324C0A /* CatalogView.swift */,
+				44FBB27BD1C556BE29B38672 /* DialogueArchiveView.swift */,
 				824914FDE994DEE478751668 /* Galleries.swift */,
 				41E14E69C4535DF571DD5688 /* LCARSActivityAttributes.swift */,
 				697278DEFB925574BA6893A7 /* LiveActivityController.swift */,
 				A66ED46CB278D19F3763EEF8 /* ObservatoryView.swift */,
+				6A3C11DC2CD6E08DE2668861 /* Resources */,
 			);
 			name = LCARSCatalog;
 			path = Sources/LCARSCatalog;
@@ -306,6 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77A1EC50CA2679B35E936F7 /* Assets.xcassets in Resources */,
+				C14D0ACC1856AE8BDF3E2323 /* archive-bridge.png in Resources */,
+				2A28FD23729B55900A4A901C /* archive-nebula.png in Resources */,
+				13F8C7863720BE2A3C6D9FFD /* archive-surface.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD78A8E9D78A0093AE214DD1 /* Assets.xcassets in Resources */,
+				47357B9A0000A4713A315F59 /* archive-bridge.png in Resources */,
+				60454DBBB77DFC5050EF10F4 /* archive-nebula.png in Resources */,
+				1444670A1197110DA22F18E9 /* archive-surface.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +375,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3EB21CD1A4F5425455ABE4 /* ArchiveModel.swift in Sources */,
 				097FF7AA8E08A1EF1A2921A1 /* CatalogApp.swift in Sources */,
 				CCF7CC49D19312C4E7AFAB20 /* CatalogView.swift in Sources */,
+				F99B04AE03F11847FB5512C5 /* DialogueArchiveView.swift in Sources */,
 				6E19C6B66F21C4F62695AB25 /* Galleries.swift in Sources */,
 				565A92A786232E5C93783940 /* LCARSActivityAttributes.swift in Sources */,
 				7F45EFAA8986B63E1B7F0289 /* LiveActivityController.swift in Sources */,
@@ -354,8 +390,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C288585486D9C1095DCC132 /* ArchiveModel.swift in Sources */,
 				44565F2475EC8BE8B85ECDE2 /* CatalogApp.swift in Sources */,
 				1C365E2C1642973AF2026778 /* CatalogView.swift in Sources */,
+				D97E2B5046B595AF3B797EFD /* DialogueArchiveView.swift in Sources */,
 				837705F48BF43989E82346A6 /* Galleries.swift in Sources */,
 				9F20815ADF1B8B79F72CAB00 /* LCARSActivityAttributes.swift in Sources */,
 				0F481F0DD4FE3849B7617292 /* LiveActivityController.swift in Sources */,

@@ -165,3 +165,10 @@ accessible summary describing the actual data and units; the sample app uses
 explicitly illustrative spectra.
 
 See [Science console](ScienceConsole.md) for the sample's composition and provenance.
+
+## Dialogue Archive recipe
+
+The sample now opens to **Archive**: search original demo dialogue, select a frame,
+move through transcript cues, save lines, share a transcript, or import an SRT file.
+`LCARSSearchField`, `LCARSTimeline`, and `LCARSPanel` are reusable library components.
+See [Dialogue Archive](DialogueArchive.md) for behavior, API examples and limitations.

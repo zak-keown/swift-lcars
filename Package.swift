@@ -10,7 +10,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "SwiftLCARS", resources: [.process("Resources")]),
-        .executableTarget(name: "LCARSCatalog", dependencies: ["SwiftLCARS"]),
+        .executableTarget(name: "LCARSCatalog", dependencies: ["SwiftLCARS"], resources: [.process("Resources")]),
         .testTarget(name: "SwiftLCARSTests", dependencies: ["SwiftLCARS"])
     ]
 )

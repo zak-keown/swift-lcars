@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "targets": {
+    "dialogue-archive": {
+      "targetKind": "new-ui",
+      "projectId": "c6db3c13-ecc7-4239-85aa-3628bb961a6a",
+      "activeDraftId": "36c5fd42-acba-4794-a87b-d0e323c32f62",
+      "designSystemPath": ".superdesign/design-system.md",
+      "referenceIds": [
+        "1c1e5520-992c-4ac0-9c13-68ae1be72a3e"
+      ],
+      "contextFiles": [
+        ".superdesign/design-system.md",
+        "Sources/SwiftLCARS/Theme.swift",
+        "Sources/SwiftLCARS/Geometry.swift",
+        "Sources/SwiftLCARS/Composition.swift",
+        "Sources/SwiftLCARS/Controls.swift",
+        "Sources/LCARSCatalog/ObservatoryView.swift"
+      ],
+      "fingerprints": {
+        ".superdesign/design-system.md": "2eaed24994eacd672397702269ac1ef780f0bbd7d7b7c512ecb04e2256821b81",
+        "Sources/SwiftLCARS/Theme.swift": "85d3641743474116588657ad7bd5f98f336f6ecd7ca55000e9b0bccc54247b32",
+        "Sources/SwiftLCARS/Geometry.swift": "24c9660a249ba1df36127e7b3977526b2b8b6e37c51361b311e0c702d050a5d5",
+        "Sources/SwiftLCARS/Composition.swift": "1e127fbbd85fcc7ca0b2e1c8aa6c69fe478146c63a1ca4fe9065e64730ca8b4b",
+        "Sources/SwiftLCARS/Controls.swift": "501879acacf42ca1feb7d30ec644d46465eb95628e4cba9d9235578d82cd6d6e",
+        "Sources/LCARSCatalog/ObservatoryView.swift": "506b46c46aabb4d93bce07da1227cbd7eaa79acfb96c6450a31382f8dfea2dc3"
+      },
+      "components": [
+        {
+          "name": "LCARSConsoleFrame",
+          "id": "390c898a-4daa-436e-b0e7-d66e02a7852b",
+          "sourcePath": "Sources/SwiftLCARS/Composition.swift"
+        }
+      ],
+      "drafts": {
+        "36c5fd42-acba-4794-a87b-d0e323c32f62": {
+          "title": "SwiftLCARS Dialogue Archive",
+          "visualDirection": "Selected TNG archive mockup, original demo content, natural GTJ3",
+          "currentVersion": 1
+        }
+      },
+      "updatedAt": "2026-09-30T00:32:40.677445+00:00"
+    }
+  }
+}
