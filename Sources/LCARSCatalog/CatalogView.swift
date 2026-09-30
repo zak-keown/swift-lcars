@@ -13,6 +13,7 @@ struct CatalogView: View {
     @State private var page: CatalogPage = .observatory
     @State private var alert: LCARSAlert = .normal
     @State private var showThemes = false
+    @State private var scanning = false
     #if os(iOS)
     @StateObject private var liveActivity = LiveActivityController()
     #endif
@@ -21,20 +22,22 @@ struct CatalogView: View {
     var body: some View {
         VStack(spacing: 0) {
             toolbar
-            LCARSConsole(title: page == .observatory ? "Stellar cartography" : "LCARS / \(page.rawValue)") {
-                ScrollView {
-                    Group {
-                        switch page {
-                        case .observatory: ObservatoryView(animated: motion)
-                        case .components: ComponentGallery(alert: $alert, readable: $readable)
-                        case .motion: MotionGallery(animated: $motion)
+            LCARSSequence(scanning ? .scanning : .idle, animated: motion) {
+                LCARSConsole(title: page == .observatory ? "Stellar cartography" : "LCARS / \(page.rawValue)") {
+                    ScrollView {
+                        Group {
+                            switch page {
+                            case .observatory: ObservatoryView(animated: motion, scanning: $scanning)
+                            case .components: ComponentGallery(alert: $alert, readable: $readable)
+                            case .motion: MotionGallery(animated: $motion)
+                            }
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 8)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 8)
+                } sidebar: {
+                    CatalogNavigation(selection: $page, animated: motion)
                 }
-            } sidebar: {
-                CatalogNavigation(selection: $page, animated: motion)
             }
         }
         .background(theme.background.color)
@@ -156,8 +159,8 @@ struct CatalogNavigation: View {
                 LCARSNavigationButton(item.rawValue, isSelected: selection == item,
                                       minimumHeight: item == .observatory ? 100 : 58) { selection = item }
             }
-            LCARSNumberGrid(columns: 2, rows: 4, animated: animated).padding(.vertical, 14)
-            LCARSActivityBand(.bottomToTop, animated: animated).frame(height: 80)
+            LCARSDataBank(columns: 2, rows: 4, animated: animated).padding(.vertical, 14)
+            LCARSIndicatorTrack(.bottomToTop, count: 8, animated: animated).frame(height: 80)
         }
     }
 }

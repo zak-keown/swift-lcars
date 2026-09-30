@@ -16,6 +16,17 @@ public enum LCARSTypography {
         return names.contains("LCARSGTJ3")
     }()
 
+    /// Font metrics for aligning the visible uppercase letters with a rail.
+    public static func capHeight(at size: CGFloat) -> CGFloat {
+        _ = isDisplayFontAvailable
+        let font = CTFontCreateWithName((isDisplayFontAvailable ? "LCARSGTJ3" : "HelveticaNeue-CondensedBold") as CFString, size, nil)
+        return CTFontGetCapHeight(font)
+    }
+
+    public static func size(forCapHeight height: CGFloat) -> CGFloat {
+        max(1, height) / max(0.01, capHeight(at: 1))
+    }
+
     public static func display(_ size: CGFloat, relativeTo style: Font.TextStyle = .headline) -> Font {
         if isDisplayFontAvailable { return .custom("LCARSGTJ3", size: size, relativeTo: style) }
         return .system(style, design: .default).weight(.semibold)

@@ -80,3 +80,21 @@ public struct LCARSSegment: Shape {
                                       style: .circular).path(in: rect)
     }
 }
+
+/// Shared dimensions keep the spine, elbow, rail and content edge aligned.
+/// Values derive from the project's approved TNG study, not a studio style sheet.
+public struct LCARSFrameMetrics: Equatable, Sendable {
+    public var elbow: LCARSElbowMetrics
+    public var gutter: CGFloat
+    public var contentInset: CGFloat
+    public init(elbow: LCARSElbowMetrics = .reference, gutter: CGFloat = 6, contentInset: CGFloat = 26) {
+        self.elbow = elbow
+        self.gutter = gutter.isFinite ? max(0, gutter) : 6
+        self.contentInset = contentInset.isFinite ? max(0, contentInset) : 26
+    }
+    public static let console = Self()
+    public static let padd = Self(elbow: .compact, gutter: 4, contentInset: 12)
+    public var elbowWidth: CGFloat { elbow.verticalArm + elbow.innerRadius }
+    public var headerHeight: CGFloat { max(elbow.outerRadius, elbow.horizontalArm + elbow.innerRadius) + 20 }
+    public var footerHeight: CGFloat { max(elbow.outerRadius, elbow.horizontalArm + elbow.innerRadius) }
+}

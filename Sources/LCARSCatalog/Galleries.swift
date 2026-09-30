@@ -69,11 +69,30 @@ struct MotionGallery: View {
     @Environment(\.lcarsTheme) private var theme
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var counter = 0
+    @State private var sequenceMode: LCARSSequenceMode = .idle
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             Toggle("Ambient animation", isOn: $animated).toggleStyle(.lcars)
             Text(reduceMotion ? "Reduce Motion is enabled. Decorative animation is paused." : "Decorative displays are synthetic. Turning off ambient animation leaves live controls and real progress updates working.")
                 .font(.callout).foregroundStyle(theme.mutedText.color)
+            LCARSSection("Coordinated sequence") {
+                Picker("Sequence", selection: $sequenceMode) {
+                    ForEach(LCARSSequenceMode.allCases, id: \.self) { Text($0.rawValue.capitalized).tag($0) }
+                }.pickerStyle(.menu)
+                LCARSSequence(sequenceMode, animated: animated) {
+                    VStack(spacing: 12) {
+                        LCARSDataBank(columns: 5, rows: 4, animated: true)
+                        LCARSIndicatorTrack(.leftToRight, animated: true).frame(height: 16)
+                        LCARSIndicatorTrack(.rightToLeft, animated: true).frame(height: 16)
+                        HStack(spacing: 12) {
+                            LCARSIndicatorTrack(.bottomToTop, count: 8, animated: true).frame(width: 26, height: 120)
+                            LCARSIndicatorTrack(.topToBottom, count: 8, animated: true).frame(width: 26, height: 120)
+                            Text("Shared clock. Staggered banks. Advance, hold, reverse, hold.")
+                                .font(.callout).foregroundStyle(theme.mutedText.color)
+                        }
+                    }
+                }
+            }
             LCARSSection("Cycling numbers") {
                 LCARSNumberGrid(columns: 6, rows: 4, animated: animated)
             }

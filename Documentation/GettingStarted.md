@@ -127,3 +127,41 @@ For simulator review, this project was developed using a dedicated **LCARS iPhon
 Both sample app targets build successfully. The initial seven library tests passed during development. The simulator UI checks exercised franchise selection and Live Activity creation; the complete Island-to-picker-and-dismissal flow remains unconfirmed after the latest lifecycle changes.
 
 This is an initial implementation for Mac, iPhone and iPad. watchOS, tvOS and visionOS-specific composition, app-supplied font families, advanced plotting and full VoiceOver/keyboard audits remain future work. The catalog's charts are illustrative; library controls keep native semantics. No television screenshots or audio effects are included.
+
+## Coordinated console motion
+
+Use one `LCARSSequence` around related displays. It supplies a shared 4 Hz clock;
+individual widgets still opt in. Numeric banks refresh in staggered groups and
+indicator tracks advance, hold, reverse, and hold again.
+
+```swift
+LCARSSequence(isScanning ? .scanning : .idle, animated: true) {
+    VStack(spacing: 12) {
+        LCARSInstrumentHeader("Long range sensors", identifier: "SCI 04")
+        LCARSDataBank(columns: 5, rows: 3, seed: 1701, animated: true)
+        LCARSIndicatorTrack(.leftToRight, count: 16, animated: true)
+            .frame(height: 12)
+    }
+}
+```
+
+Modes are `.idle`, `.scanning`, `.processing`, and `.alert`. These are authored
+choreography presets, not canonical production timings. The sequence preserves
+its elapsed position when paused and suspends while offscreen, inactive, or under
+Reduce Motion. Its children are static outside a sequence. For custom displays,
+read `@Environment(\.lcarsSequence)` and use its `tick`, `mode`,
+`generation(forBank:)`, or `activeSegment(count:)`. Avoid binding real measurements
+to this decorative clock.
+
+`LCARSFrameMetrics` connects the outer elbow, sidebar width, rail thickness,
+gutters, and content inset. Pass custom metrics to `LCARSConsole(title:metrics:)`;
+the default `.console` preserves the approved study proportions. Narrow layouts
+use the compact PADD treatment. `LCARSInstrumentHeader` places a readable title
+within a segmented rule without fixing text height.
+
+`LCARSSpectrum(samples:label:summary:)` draws normalized samples in `0...1`.
+It clamps out-of-range values and maps non-finite samples to zero. Supply an
+accessible summary describing the actual data and units; the sample app uses
+explicitly illustrative spectra.
+
+See [Science console](ScienceConsole.md) for the sample's composition and provenance.

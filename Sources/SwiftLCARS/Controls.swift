@@ -34,6 +34,7 @@ public struct LCARSButtonStyle: ButtonStyle {
             let shape = LCARSSegment(ends, layoutDirection: direction)
             configuration.label
                 .lcarsDisplay(27)
+                .labelStyle(LCARSLabelStyle())
                 .textCase(.uppercase)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, horizontalPadding).padding(.vertical, 9)
@@ -119,5 +120,19 @@ public struct LCARSStatus: View {
             .font(.callout.weight(.medium))
             .foregroundStyle(alert.tint(in: theme).color)
             .accessibilityElement(children: .combine)
+    }
+}
+
+/// Symbols use their own point size instead of inheriting the unusually tall
+/// display font. Native Label titles keep the enclosing button's typography.
+public struct LCARSLabelStyle: LabelStyle {
+    @ScaledMetric(relativeTo: .headline) private var symbolSize: CGFloat = 16
+    public init() {}
+    public func makeBody(configuration: Configuration) -> some View {
+        HStack(alignment: .center, spacing: 10) {
+            configuration.icon.font(.system(size: symbolSize, weight: .medium))
+                .accessibilityHidden(true)
+            configuration.title
+        }
     }
 }

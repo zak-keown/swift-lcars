@@ -59,3 +59,15 @@ Era styling, interaction state and information density are independent choices. 
 LCARS was created by Michael Okuda for Star Trek. This is an independent, unofficial project. References are linked, not redistributed. The palette file identifies fan-source values and project-defined role assignments separately; none is presented as an official studio specification.
 
 The unmodified LCARS GTJ3 font is included under its author's terms. See [third-party notices](THIRD-PARTY-NOTICES.md).
+
+## TNG science console
+
+The published sample now includes an annotated sensor map, target-linked spectra,
+a simulated scan log, and coordinated LCARS animation. The reusable additions are
+`LCARSFrameMetrics`, `LCARSInstrumentHeader`, `LCARSSequence`, `LCARSDataBank`,
+`LCARSIndicatorTrack`, and `LCARSSpectrum`. See the [science console notes](Documentation/ScienceConsole.md)
+and [API examples](Documentation/GettingStarted.md#coordinated-console-motion).
+
+Four [application mockups](Design/AppConcepts/README.md) explore dialogue search,
+a reference library, an astronomy atlas, and a Mac system monitor. They are visual
+targets for future native app recipes, with exact generation prompts included.

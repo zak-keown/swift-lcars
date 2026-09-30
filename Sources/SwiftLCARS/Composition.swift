@@ -27,27 +27,30 @@ public struct LCARSConsole<Content: View, Sidebar: View>: View {
     private let title: String
     private let content: Content
     private let sidebar: Sidebar
+    private let metrics: LCARSFrameMetrics
     @Environment(\.lcarsTheme) private var theme
     @Environment(\.lcarsAlert) private var alert
     @Environment(\.layoutDirection) private var direction
     @Environment(\.dynamicTypeSize) private var typeSize
+    @Environment(\.lcarsFontMode) private var fontMode
+    @ScaledMetric(relativeTo: .largeTitle) private var titleScale: CGFloat = 1
 
-    public init(title: String, @ViewBuilder content: () -> Content, @ViewBuilder sidebar: () -> Sidebar) {
-        self.title = title; self.content = content(); self.sidebar = sidebar()
+    public init(title: String, metrics: LCARSFrameMetrics = .console, @ViewBuilder content: () -> Content, @ViewBuilder sidebar: () -> Sidebar) {
+        self.title = title; self.metrics = metrics; self.content = content(); self.sidebar = sidebar()
     }
 
     public var body: some View {
         GeometryReader { proxy in
             let compact = proxy.size.width < 760 || typeSize.isAccessibilitySize
-            VStack(spacing: 6) {
+            VStack(spacing: compact ? LCARSFrameMetrics.padd.gutter : metrics.gutter) {
                 header(compact: compact)
-                HStack(alignment: .top, spacing: compact ? 0 : 26) {
+                HStack(alignment: .top, spacing: compact ? 0 : metrics.contentInset) {
                     if !compact {
-                        VStack(spacing: 6) {
+                        VStack(spacing: metrics.gutter) {
                             sidebar
                             Rectangle().fill(theme.tertiary.color).frame(maxHeight: .infinity)
                                 .accessibilityHidden(true)
-                        }.frame(width: 144)
+                        }.frame(width: metrics.elbow.verticalArm)
                     }
                     VStack(alignment: .leading, spacing: 20) {
                         if compact { sidebar }
@@ -80,13 +83,22 @@ public struct LCARSConsole<Content: View, Sidebar: View>: View {
                     .accessibilityAddTraits(.isHeader)
             }
         } else {
-            HStack(alignment: .top, spacing: 6) {
-                LCARSElbow(layoutDirection: direction).fill(frameColor).frame(width: 192, height: 104)
+            HStack(alignment: .top, spacing: metrics.gutter) {
+                LCARSElbow(metrics: metrics.elbow, layoutDirection: direction).fill(frameColor)
+                    .frame(width: metrics.elbowWidth, height: metrics.headerHeight)
                     .accessibilityHidden(true)
-                Rectangle().fill(theme.tertiary.color).frame(width: 90, height: 36).accessibilityHidden(true)
-                Rectangle().fill(theme.secondary.color).frame(maxWidth: .infinity).frame(height: 36)
+                Rectangle().fill(theme.tertiary.color).frame(width: 90, height: metrics.elbow.horizontalArm).accessibilityHidden(true)
+                Rectangle().fill(theme.secondary.color).frame(maxWidth: .infinity).frame(height: metrics.elbow.horizontalArm)
                     .accessibilityHidden(true)
-                Text(title).textCase(.uppercase).lcarsDisplay(52, relativeTo: .largeTitle)
+                Text(title).textCase(.uppercase)
+                    .lcarsDisplay(LCARSTypography.size(forCapHeight: metrics.elbow.horizontalArm), relativeTo: .largeTitle)
+                    .alignmentGuide(.top) { dimensions in
+                        if fontMode == .authentic && LCARSTypography.isDisplayFontAvailable {
+                            // Align visible capitals, not the font's ascender box.
+                            return dimensions[.firstTextBaseline] - metrics.elbow.horizontalArm * titleScale
+                        }
+                        return (dimensions.height - metrics.elbow.horizontalArm) / 2
+                    }
                     .foregroundStyle(theme.primary.color).padding(.leading, 16)
                     .fixedSize(horizontal: false, vertical: true).accessibilityAddTraits(.isHeader)
             }
@@ -94,18 +106,45 @@ public struct LCARSConsole<Content: View, Sidebar: View>: View {
     }
 
     private func footer(compact: Bool) -> some View {
-        HStack(alignment: .bottom, spacing: 6) {
-            LCARSElbow(.bottomLeading, metrics: compact ? .compact : .reference, layoutDirection: direction)
-                .fill(frameColor).frame(width: compact ? 76 : 192, height: compact ? 32 : 88)
-            Rectangle().fill(theme.secondary.color).frame(width: compact ? 44 : 90, height: compact ? 12 : 36)
+        HStack(alignment: .bottom, spacing: compact ? LCARSFrameMetrics.padd.gutter : metrics.gutter) {
+            LCARSElbow(.bottomLeading, metrics: compact ? LCARSFrameMetrics.padd.elbow : metrics.elbow, layoutDirection: direction)
+                .fill(frameColor).frame(width: compact ? 76 : metrics.elbowWidth, height: compact ? 32 : metrics.footerHeight)
+            Rectangle().fill(theme.secondary.color).frame(width: compact ? 44 : 90, height: compact ? 12 : metrics.elbow.horizontalArm)
             LCARSSegment(.trailing, layoutDirection: direction).fill(theme.tertiary.color)
-                .frame(height: compact ? 12 : 36)
+                .frame(height: compact ? 12 : metrics.elbow.horizontalArm)
         }.accessibilityHidden(true)
     }
 }
 
 public extension LCARSConsole where Sidebar == EmptyView {
-    init(title: String, @ViewBuilder content: () -> Content) {
-        self.init(title: title, content: content, sidebar: { EmptyView() })
+    init(title: String, metrics: LCARSFrameMetrics = .console, @ViewBuilder content: () -> Content) {
+        self.init(title: title, metrics: metrics, content: content, sidebar: { EmptyView() })
+    }
+}
+
+/// A title interrupting a segmented rail. Text determines the height, including
+/// in readable font mode; the decorative rule never constrains the label.
+public struct LCARSInstrumentHeader: View {
+    public var title: String
+    public var identifier: String
+    @Environment(\.lcarsTheme) private var theme
+    @Environment(\.layoutDirection) private var direction
+    @Environment(\.dynamicTypeSize) private var typeSize
+    public init(_ title: String, identifier: String = "") {
+        self.title = title; self.identifier = identifier
+    }
+    public var body: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            Text(title).textCase(.uppercase).lcarsDisplay(28, relativeTo: .headline)
+                .foregroundStyle(theme.primary.color).fixedSize(horizontal: false, vertical: true)
+                .layoutPriority(1)
+            LCARSSegment(.trailing, layoutDirection: direction).fill(theme.secondary.color)
+                .frame(minWidth: 12, maxWidth: .infinity).frame(height: 10)
+                .accessibilityHidden(true)
+            if !identifier.isEmpty && !typeSize.isAccessibilitySize {
+                Text(identifier).lcarsDisplay(22, relativeTo: .caption)
+                    .foregroundStyle(theme.secondary.color).accessibilityHidden(true)
+            }
+        }.accessibilityAddTraits(.isHeader)
     }
 }
