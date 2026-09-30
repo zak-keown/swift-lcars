@@ -20,26 +20,52 @@ struct CatalogView: View {
     private var theme: LCARSTheme { LCARSTheme.presets.first { $0.id == themeID } ?? .classic }
 
     var body: some View {
-        VStack(spacing: 0) {
-            toolbar
-            LCARSSequence(scanning ? .scanning : .idle, animated: motion) {
-                LCARSConsole(title: page == .archive ? "Dialogue archive" : (page == .observatory ? "Stellar cartography" : "LCARS / \(page.rawValue)")) {
-                    ScrollView {
-                        Group {
-                            switch page {
-                            case .archive: DialogueArchiveView()
-                            case .observatory: ObservatoryView(animated: motion, scanning: $scanning)
-                            case .components: ComponentGallery(alert: $alert, readable: $readable)
-                            case .motion: MotionGallery(animated: $motion)
+        Group {
+            #if LCARS_DUO_SDK && os(iOS)
+            if #available(iOS 27.1, *) {
+                NavigationStack {
+                    catalogContent
+                        .toolbar {
+                            ToolbarItem(placement:.topBarLeading) {
+                                Menu {
+                                    Picker("Section",selection:$page) {
+                                        ForEach(CatalogPage.allCases) { Text($0.rawValue).tag($0) }
+                                    }
+                                } label: { Label("Catalog",systemImage:"line.3.horizontal") }
+                            }
+                            ToolbarItem(placement:.topBarTrailing) {
+                                Menu {
+                                    Picker("Franchise",selection:$themeID) {
+                                        ForEach(LCARSTheme.presets) { Text($0.name).tag($0.id) }
+                                    }
+                                } label: { Label("Franchise",systemImage:"paintpalette") }
+                            }
+                            ToolbarItem(placement:.bottomBar) {
+                                Button { motion.toggle() } label: {
+                                    Label(motion ? "Pause ambient motion" : "Enable ambient motion",systemImage:motion ? "pause.circle" : "play.circle")
+                                }
+                            }
+                            ToolbarItem(placement:.bottomBar) {
+                                Button {
+                                    if liveActivity.isRunning { liveActivity.stop() } else { liveActivity.start(theme:theme) }
+                                } label: {
+                                    Label(liveActivity.isRunning ? "End Live Activity" : "Start Live Activity",systemImage:liveActivity.isRunning ? "stop.circle" : "capsule.inset.filled")
+                                }.disabled(liveActivity.isStopping)
                             }
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 8)
-                    }
-                } sidebar: {
-                    CatalogNavigation(selection: $page, animated: motion)
-                }
-            }
+                        .sheet(isPresented:$showThemes) {
+                            NavigationStack {
+                                List(LCARSTheme.presets) { option in
+                                    Button(option.name) { themeID = option.id; showThemes = false }
+                                }.navigationTitle("Change franchise")
+                            }
+                        }
+                        .toolbarBackground(.hidden,for:.navigationBar)
+                }.tint(theme.primary.color)
+            } else { legacyContent }
+            #else
+            legacyContent
+            #endif
         }
         .background(theme.background.color)
         .lcarsTheme(theme).lcarsAlert(alert)
@@ -56,9 +82,40 @@ struct CatalogView: View {
         #endif
     }
 
+    private var legacyContent: some View {
+        VStack(spacing:0) { toolbar; catalogContent }
+    }
+    private var catalogContent: some View {
+            LCARSSequence(scanning ? .scanning : .idle, animated: motion) {
+                if page == .archive {
+                    DialogueArchiveView()
+                } else {
+                    LCARSConsole(title: page == .observatory ? "Stellar cartography" : "LCARS / \(page.rawValue)") {
+                        ScrollView {
+                            Group {
+                                switch page {
+                                case .archive: EmptyView()
+                                case .observatory: ObservatoryView(animated: motion, scanning: $scanning)
+                                case .components: ComponentGallery(alert: $alert, readable: $readable)
+                                case .motion: MotionGallery(animated: $motion)
+                                }
+                            }.frame(maxWidth: .infinity, alignment: .leading).padding(.bottom, 8)
+                        }
+                    } sidebar: {
+                        CatalogNavigation(selection: $page, animated: motion)
+                    }
+                }
+            }
+    }
+
     private var toolbar: some View {
         ViewThatFits(in: .horizontal) {
             HStack(spacing: 16) {
+                Menu("Catalog") {
+                    Picker("Section", selection: $page) {
+                        ForEach(CatalogPage.allCases) { Text($0.rawValue).tag($0) }
+                    }
+                }.menuStyle(.borderlessButton).fixedSize()
                 LCARSStatus()
                 Spacer(minLength: 8)
                 franchiseButton
@@ -68,7 +125,14 @@ struct CatalogView: View {
                 liveActivityButton
                 #endif
             }
-            HStack(spacing: 12) {
+            HStack(spacing: 8) {
+                Menu {
+                    Picker("Section", selection: $page) {
+                        ForEach(CatalogPage.allCases) { Text($0.rawValue).tag($0) }
+                    }
+                } label: {
+                    Image(systemName: "line.3.horizontal").frame(width:44,height:44)
+                }.foregroundStyle(theme.secondary.color).accessibilityLabel("Catalog")
                 franchiseButton
                 Spacer(minLength: 0)
                 motionButton
@@ -77,7 +141,7 @@ struct CatalogView: View {
                 #endif
             }
         }
-        .padding(.horizontal, 24).padding(.top, 10).padding(.bottom, 2)
+        .padding(.horizontal, 16).padding(.top, 4).padding(.bottom, 0)
     }
 
     private var franchiseButton: some View {
@@ -88,8 +152,7 @@ struct CatalogView: View {
                 Image(systemName: "chevron.down").font(.caption.bold())
             }
             .padding(.horizontal, 16).frame(minHeight: 44)
-            .background(.black, in: Capsule())
-            .overlay(Capsule().stroke(theme.secondary.color, lineWidth: 1))
+            
         }
         .buttonStyle(.plain)
         .foregroundStyle(theme.primary.color)
@@ -152,13 +215,23 @@ struct CatalogNavigation: View {
     @Environment(\.lcarsTheme) private var theme
     var body: some View {
         if compact {
-            Picker("Section", selection: $selection) {
-                ForEach(CatalogPage.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented)
+            Menu {
+                Picker("Section", selection: $selection) {
+                    ForEach(CatalogPage.allCases) { Text($0.rawValue).tag($0) }
+                }
+            } label: {
+                HStack {
+                    Text("CATALOG / " + selection.rawValue.uppercased()).lcarsDisplay(20)
+                    Spacer()
+                    Image(systemName: "chevron.down").font(.caption.bold())
+                }.frame(minHeight: 44)
+                    .foregroundStyle(theme.secondary.color)
+            }.menuStyle(.borderlessButton).buttonStyle(.plain)
+                .accessibilityLabel("Catalog section").accessibilityValue(selection.rawValue)
         } else {
             ForEach(CatalogPage.allCases) { item in
                 LCARSNavigationButton(item.rawValue, isSelected: selection == item,
-                                      minimumHeight: item == .observatory ? 100 : 58) { selection = item }
+                                      minimumHeight: 52) { selection = item }
             }
             LCARSDataBank(columns: 2, rows: 4, animated: animated).padding(.vertical, 14)
             LCARSIndicatorTrack(.bottomToTop, count: 8, animated: animated).frame(height: 80)

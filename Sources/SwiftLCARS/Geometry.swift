@@ -93,6 +93,10 @@ public struct LCARSFrameMetrics: Equatable, Sendable {
         self.contentInset = contentInset.isFinite ? max(0, contentInset) : 26
     }
     public static let console = Self()
+    /// Dense application chrome, retaining circular elbows and a continuous sidebar.
+    public static let workstation = Self(elbow: .init(verticalArm: 120, horizontalArm: 24,
+                                                     outerRadius: 48, innerRadius: 24),
+                                         gutter: 6, contentInset: 18)
     public static let padd = Self(elbow: .compact, gutter: 4, contentInset: 12)
     public var elbowWidth: CGFloat { elbow.verticalArm + elbow.innerRadius }
     public var headerHeight: CGFloat { max(elbow.outerRadius, elbow.horizontalArm + elbow.innerRadius) + 20 }

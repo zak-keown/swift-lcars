@@ -12,7 +12,7 @@ public struct LCARSSearchField: View {
     public var body: some View {
         HStack(spacing: 6) {
             TextField(prompt, text: $text)
-                .textFieldStyle(.plain).font(.title3)
+                .textFieldStyle(.plain).lcarsDisplay(36, relativeTo: .title3)
                 .foregroundStyle(theme.secondary.color)
                 .padding(.horizontal, 12).frame(minHeight: 44)
                 .overlay(alignment: .bottom) { Rectangle().fill(theme.secondary.color).frame(height: 3) }
@@ -42,21 +42,30 @@ public struct LCARSTimeline: View {
         self.onEditingChanged = onEditingChanged
     }
     public var body: some View {
-        VStack(spacing: 3) {
+        ZStack {
+            GeometryReader { proxy in
+                let width = max(0, proxy.size.width - 20)
+                let value = position.isFinite ? min(duration, max(0, position)) : 0
+                ZStack(alignment: .leading) {
+                    Capsule().fill(theme.secondary.color).frame(height: 14)
+                    ForEach(Array(cuePositions.enumerated()), id: \.offset) { _, cue in
+                        if cue.isFinite && cue >= 0 && cue <= duration {
+                            Rectangle().fill(theme.background.color).frame(width: 2, height: 14)
+                                .offset(x: width * cue / duration)
+                        }
+                    }
+                    Rectangle().fill(theme.primary.color).frame(width: 8, height: 28)
+                        .offset(x: max(0, width * value / duration - 4))
+                }.padding(.horizontal, 10).frame(height: 44)
+            }.accessibilityHidden(true).allowsHitTesting(false)
             Slider(value: Binding(get: { position.isFinite ? min(duration, max(0, position)) : 0 },
                                   set: { position = $0 }), in: 0...duration,
                    onEditingChanged: onEditingChanged)
-                .tint(theme.primary.color).accessibilityLabel("Transcript position")
+                .opacity(0.015)
+                .accessibilityLabel("Transcript position")
                 .accessibilityValue("\(Int(position.isFinite ? max(0, position) : 0)) of \(Int(duration)) seconds")
-            GeometryReader { proxy in
-                ForEach(Array(cuePositions.enumerated()), id: \.offset) { _, cue in
-                    if cue.isFinite && cue >= 0 && cue <= duration {
-                        Rectangle().fill(theme.secondary.color).frame(width: 2, height: 6)
-                            .offset(x: max(0, (proxy.size.width - 2) * cue / duration))
-                    }
-                }
-            }.frame(height: 6).accessibilityHidden(true)
-        }
+        }.frame(height: 44)
+
     }
 }
 

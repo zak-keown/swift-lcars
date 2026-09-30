@@ -4,6 +4,10 @@ options:
   deploymentTarget:
     iOS: "17.0"
     macOS: "14.0"
+configs:
+  Debug: debug
+  Release: release
+  DuoDebug: debug
 packages:
   SwiftLCARS:
     path: .
@@ -12,6 +16,9 @@ settings:
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: "1"
+  configs:
+    DuoDebug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) DEBUG LCARS_DUO_SDK"
 targets:
   CatalogUITests:
     type: bundle.ui-testing
@@ -119,3 +126,10 @@ schemes:
         LCARSCatalog-macOS: all
     run:
       config: Debug
+
+  LCARSCatalog-Duo:
+    build:
+      targets:
+        LCARSCatalog-iOS: all
+    run:
+      config: DuoDebug

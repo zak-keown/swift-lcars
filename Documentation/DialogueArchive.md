@@ -67,3 +67,31 @@ that review caught and corrected an image loading/layout issue. Automated tests
 were not added or run for this iteration. SRT import/export, persistence across
 launches, full playback interaction, iPad layout, and full accessibility behavior
 still need dedicated verification. The existing Live Activity is unchanged.
+
+
+## iPhone Duo beta adaptation (2026-09-30)
+
+Build `LCARSCatalog-Duo` with Xcode 27.1 beta and the `DuoDebug` configuration.
+The configuration defines `LCARS_DUO_SDK`; regular Debug/Release builds keep their
+older SDK compatibility. The deployment minimum remains iOS 17.
+
+The iOS recipe uses horizontal size class rather than the desktop's fixed reference
+canvas. In regular width it uses iOS 27.1 `ArrangementView` with split styling for
+the player and dialogue index. In compact width the same view exposes Frame,
+Results, and Transcript tabs. The ArchiveModel stays above layout changes, so
+query, selected cue, playback position, and saved items share the same owner.
+Playback controls remain outside the scrolling preview. Image height responds to
+available container height. Native toolbar Labels let the system place controls
+vertically, and foreground content retains the system's asymmetric safe areas.
+The franchise deep link presents the native theme sheet in this configuration.
+
+Sources:
+- [Designing for iPhone Duo](https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo)
+- [Prepare your app for iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111461/)
+- [Strike a pose with adaptive layouts](https://developer.apple.com/videos/play/tech-talks/111463/)
+- [Raise the bar with iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111462/)
+
+Verification: beta build and launch succeeded on the dedicated LCARS iPhone Duo
+simulator; the outer display has been inspected. Inner-display, partial-fold,
+Split View, and continuity checks remain pending: Device Hub UI automation timed
+out. This is beta sample support, not a completed production-readiness claim.

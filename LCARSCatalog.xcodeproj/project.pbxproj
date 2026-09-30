@@ -538,6 +538,24 @@
 			};
 			name = Debug;
 		};
+		8015A21EA298FE5EA4B384A5 /* DuoDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog.activity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DuoDebug;
+		};
 		8232BEBF0C99D1D7E0570276 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -631,6 +649,71 @@
 			};
 			name = Release;
 		};
+		BF7B78803F44A9BA1681D36D /* DuoDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG LCARS_DUO_SDK";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = DuoDebug;
+		};
 		D6252D732532434812DA4A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -649,6 +732,23 @@
 			};
 			name = Release;
 		};
+		D858D7ABB1E67B31ED0F58E1 /* DuoDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LCARSCatalog-iOS";
+			};
+			name = DuoDebug;
+		};
 		D999C5FA9C0D052E114B3FA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -666,6 +766,43 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		DAAAA210736A782352D936A6 /* DuoDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog;
+				PRODUCT_NAME = LCARSCatalog;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DuoDebug;
+		};
+		E6F7A0EB29048306438EF21B /* DuoDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Examples/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakkeown.swiftlcars.catalog.mac;
+				PRODUCT_NAME = LCARSCatalog;
+				SDKROOT = macosx;
+			};
+			name = DuoDebug;
 		};
 		FD0DEEA9DA9B9FB84D2ADCA2 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -691,6 +828,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71F91D1A151BF61D9E181C36 /* Debug */,
+				BF7B78803F44A9BA1681D36D /* DuoDebug */,
 				BDBA82647FDA05AC85195DD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -700,6 +838,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8232BEBF0C99D1D7E0570276 /* Debug */,
+				D858D7ABB1E67B31ED0F58E1 /* DuoDebug */,
 				FD0DEEA9DA9B9FB84D2ADCA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -709,6 +848,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D999C5FA9C0D052E114B3FA2 /* Debug */,
+				8015A21EA298FE5EA4B384A5 /* DuoDebug */,
 				409D25F67E47A88AD6D788DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -718,6 +858,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D8DFBF0CB8FF3236996EF33 /* Debug */,
+				E6F7A0EB29048306438EF21B /* DuoDebug */,
 				057341E97393E46A26871118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -727,6 +868,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3A48505D79943123106695C /* Debug */,
+				DAAAA210736A782352D936A6 /* DuoDebug */,
 				D6252D732532434812DA4A06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
